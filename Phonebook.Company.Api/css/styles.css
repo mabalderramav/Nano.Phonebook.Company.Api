@@ -1,0 +1,12 @@
+paper-toolbar.main{
+    background-color: #1B5E20;
+}
+paper-toolbar.drawer{
+    background-color: #2E7D32;
+}
+paper-fab.add{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #1B5E20;
+}

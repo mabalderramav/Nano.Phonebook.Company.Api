@@ -1,0 +1,34 @@
+<dom-module id="nano-phonebook-agenda">
+    <link rel="stylesheet" href="nano-phonebook-agenda.css"/>
+    
+    <template>
+        <template is="dom-repeat" items="{{list}}">
+            <div class="Agenda">
+                <figure class="Agenda-imagenContainer">
+                   <img class="Agenda-imagen" src="{{item.ImagenRuta}}" alt="{{item.Codigo}}"/>
+                </figure>
+                <span class="Agenda-item">{{item.Codigo}}</span>
+                <span class="Agenda-item">{{item.Nombre}}</span>
+                <span class="Agenda-item">{{item.Email}}</span>
+                <span class="Agenda-item">{{item.Habilitado}}</span>
+                <span class="Agenda-item">{{item.LineaDirecta}}</span>
+                <span class="Agenda-item">{{item.Interno}}</span>
+                <span class="Agenda-item">{{item.Corporativo}}</span>
+                <span class="Agenda-item">{{item.Cargo.Descripcion}}</span>
+                <span class="Agenda-item">{{item.Ubicacion.Descripcion}}</span>
+                <span class="Agenda-item">{{item.Cargo.Area.Descripcion}}</span>
+            </div>
+        </template>
+    </template>
+
+    <script>
+        Polymer({
+            is: "nano-phonebook-agenda",
+            properties: {
+                list: new Array()
+            },
+            ready: function(){
+            }
+        });
+    </script>
+</dom-module>

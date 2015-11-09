@@ -1,0 +1,33 @@
+<link rel="import" href="../iron-ajax/iron-ajax.html"/>
+<link rel="import" href="../nano-phonebook-agenda/nano-phonebook-agenda.html"/>
+<dom-module id="nano-phonebook-company">
+    <link rel="stylesheet" href="nano-phonebook-company.css">
+    <template>
+         <iron-ajax
+            auto
+            handle-as="json"
+            url="http://localhost:8787/api/Agendas/"
+            on-response="getAllAgenda">
+        </iron-ajax>
+        <nano-phonebook-agenda id="agenda">
+        </nano-phonebook-agenda>
+    </template>
+    <script>
+        Polymer({
+            is: "nano-phonebook-company",
+            properties: {
+
+            },
+            ready: function(){
+
+            },
+            getAllAgenda: function(event){
+                console.log(event.detail.response);
+                var lista = event.detail.response;
+                var agenda = this.$.agenda;
+                agenda.list = lista;
+                console.log(agenda.list);
+            }
+        });
+    </script>
+</dom-module>
