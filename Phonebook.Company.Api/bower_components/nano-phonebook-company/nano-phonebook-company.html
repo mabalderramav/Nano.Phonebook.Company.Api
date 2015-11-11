@@ -1,7 +1,14 @@
 <link rel="import" href="../iron-ajax/iron-ajax.html"/>
 <link rel="import" href="../nano-phonebook-agenda/nano-phonebook-agenda.html"/>
 <dom-module id="nano-phonebook-company">
-    <link rel="stylesheet" href="nano-phonebook-company.css">
+    <style>
+        :host {
+            width: 100%;
+            height: 100%;
+            display: block;
+            overflow-y: auto;
+        }
+    </style>
     <template>
          <iron-ajax
             auto
@@ -11,6 +18,7 @@
         </iron-ajax>
         <nano-phonebook-agenda id="agenda">
         </nano-phonebook-agenda>
+        
     </template>
     <script>
         Polymer({
@@ -22,11 +30,11 @@
 
             },
             getAllAgenda: function(event){
-                console.log(event.detail.response);
+                //console.log(event.detail.response);
                 var lista = event.detail.response;
                 var agenda = this.$.agenda;
-                agenda.list = lista;
-                console.log(agenda.list);
+                agenda.lista = lista;
+                //console.log(agenda.lista);
             }
         });
     </script>

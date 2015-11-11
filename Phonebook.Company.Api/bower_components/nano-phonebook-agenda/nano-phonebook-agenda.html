@@ -1,31 +1,53 @@
+<link rel="stylesheet" href="nano-phonebook-agenda.css"/>
 <dom-module id="nano-phonebook-agenda">
-    <link rel="stylesheet" href="nano-phonebook-agenda.css"/>
-    
     <template>
-        <template is="dom-repeat" items="{{list}}">
+        <template is="dom-repeat" items="{{lista}}">
             <div class="Agenda">
                 <figure class="Agenda-imagenContainer">
                    <img class="Agenda-imagen" src="{{item.ImagenRuta}}" alt="{{item.Codigo}}"/>
                 </figure>
-                <span class="Agenda-item">{{item.Codigo}}</span>
-                <span class="Agenda-item">{{item.Nombre}}</span>
-                <span class="Agenda-item">{{item.Email}}</span>
-                <span class="Agenda-item">{{item.Habilitado}}</span>
-                <span class="Agenda-item">{{item.LineaDirecta}}</span>
-                <span class="Agenda-item">{{item.Interno}}</span>
-                <span class="Agenda-item">{{item.Corporativo}}</span>
-                <span class="Agenda-item">{{item.Cargo.Descripcion}}</span>
-                <span class="Agenda-item">{{item.Ubicacion.Descripcion}}</span>
-                <span class="Agenda-item">{{item.Cargo.Area.Descripcion}}</span>
+                <p class="Agenda-itemContainer">
+                    <span class="Agenda-item">{{item.Codigo}}</span>
+                </p>
+                <p class="Agenda-itemContainer">
+                    <span class="Agenda-item">{{item.Nombre}}</span>
+                </p>
+                <p class="Agenda-itemContainer">
+                    <span class="Agenda-itemLabel">Email: </span>
+                    <span class="Agenda-item">{{item.Email}}</span>
+                </p>
+                <p class="Agenda-itemContainer">
+                    <span class="Agenda-itemLabel">Linea directa: </span>
+                    <span class="Agenda-item">{{item.LineaDirecta}}</span>
+                </p>
+                <p class="Agenda-itemContainer">
+                    <span class="Agenda-itemLabel">Interno: </span>
+                    <span class="Agenda-item">{{item.Interno}}</span>
+                </p>
+                <p class="Agenda-itemContainer">
+                    <span class="Agenda-itemLabel">Corporativo: </span>
+                    <span class="Agenda-item">{{item.Corporativo}}</span>
+                </p>
+                <p class="Agenda-itemContainer">
+                    <span class="Agenda-itemLabel">Area: </span>
+                    <span class="Agenda-item">{{item.Cargo.Area.Descripcion}}</span>
+                </p>
+                <p class="Agenda-itemContainer">
+                    <span class="Agenda-itemLabel">Cargo :</span>
+                    <span class="Agenda-item">{{item.Cargo.Descripcion}}</span>
+                </p>
+                <p class="Agenda-itemContainer">
+                    <span class="Agenda-itemLabel">Ubicación :</span>
+                    <span class="Agenda-item">{{item.Ubicacion.Descripcion}}</span>
+                </p>
             </div>
         </template>
     </template>
-
     <script>
         Polymer({
             is: "nano-phonebook-agenda",
             properties: {
-                list: new Array()
+                lista: new Array()
             },
             ready: function(){
             }

@@ -4,9 +4,21 @@ paper-toolbar.main{
 paper-toolbar.drawer{
     background-color: #2E7D32;
 }
+
+.principal{
+    background-color: #E8F5E9;
+}
 paper-fab.add{
     position: absolute;
     bottom: 10px;
     right: 10px;
     background-color: #1B5E20;
 }
+    @media (min-width: 640px){
+        paper-fab.add{
+            position: relative;
+            bottom: 0;
+            right: 0;
+            margin: 1em 1em 0 1em;
+        }
+    }
