@@ -1,27 +1,30 @@
 .Agenda {
     background-color: #4CAF50;
     border-radius: 1.2em;
-    margin: 1em;
-    max-width: 500px;
-    padding: .5em;
+    margin: 1em auto;
+    padding: .5em .5em 2em .5em;
+    overflow: hidden;
+    position: relative;
+    width: 80%;
 }
-    @media (min-width: 500px){
-        .Agenda{
-            margin: 1em auto;
-        }
-    }
     @media (min-width: 640px){
         .Agenda {
-            display: inline-block;
+            box-shadow: 10px 5px 5px black;
             margin: 1em;
-            width: 300px;
+            padding: .5em .5em 1em 1em;
+            width: 200px;
         }
     }
 .Agenda-imagenContainer {
     max-width: 80px;
-    margin: 0;
     padding: 0;
+    margin: 0 auto;
 }
+    @media (min-width: 800px) {
+        .Agenda-imagenContainer {
+            max-width: 80px;
+        }
+    }
 .Agenda-imagen {
     border-radius: 50%;
     margin: 0;
@@ -29,13 +32,48 @@
     width: 100%;
 }
 .Agenda-itemContainer {
-    margin: 0;
+    margin: 0 1em;
     padding: 0;
+}
+    @media (min-width: 640px) {
+        .Agenda-itemContainer {
+            margin: 0;
+        }
+    }
+.Agenda-itemContainerCodigo{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-weight: bold;
+}
+.Agenda-itemContainerNombre{
+    text-align: center;
+    margin: 0 0 .3em 0;
 }
 .Agenda-itemLabel {
     font-weight: bold;
-    
+    font-size: .9em;
 }
+    @media (min-width: 640px) {
+        .Agenda-itemLabel {
+            font-size: .8em;
+        }
+    }
 .Agenda-item {
-
+    font-size: 1em;
 }
+    @media (min-width: 640px) {
+        .Agenda-item {
+            font-size: .8em;
+        }
+    }
+.Agenda-itemSelect {
+    font-weight: bold;
+    font-size: 1.4em;
+    color: #fff;
+}
+    @media (min-width: 640px) {
+        .Agenda-itemSelect {
+            font-size: 1.2em;
+        }
+    }
